@@ -36,7 +36,7 @@ const Text1 = styled.div`
   font-weight: 700;
 `
 
-const Text2 = styled(div)(() => ({
+const Text2 = styled("div")(() => ({
   fontSize: "15px",
   color: "blue",
 }))
