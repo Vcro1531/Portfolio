@@ -31,12 +31,12 @@ const TextStyle = css`
   color: gray;
 `
 
-const Text1 = styled.div`
+const Text1 = styled.div<{ disable: boolean }>`
   font-size: 20px;
   font-weight: 700;
 `
 
-const Text2 = styled("div")(() => ({
+const Text2 = styled("div")<{ disable: boolean }>(() => ({
   fontSize: "15px",
   color: "blue",
 }))
