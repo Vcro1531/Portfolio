@@ -36,8 +36,13 @@ const Introduction: FunctionComponent = function () {
         <ProfileImage />
 
         <div>
-          <SubTitle>Nice to Meet You,</SubTitle>
-          <Title>I'm KimJiMin.</Title>
+          <SubTitle>
+            Hello, World! 공부보단 배움, 실력보단 사람을 중요히 생각하는
+            FrontEnd
+          </SubTitle>
+          <>
+            <Title>RWA</Title>
+          </>
         </div>
       </Wrapper>
     </Background>
