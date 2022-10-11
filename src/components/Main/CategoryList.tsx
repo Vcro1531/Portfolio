@@ -26,7 +26,9 @@ const CategoryListWrapper = styled.div`
   margin: 100px auto 0;
 `
 
-const CategoryItem = styled(({ active, ...props }) => <Link {...props} />)`
+const CategoryItem = styled(({ active, ...props }: GatsbyLinkProps) => (
+  <Link {...props} />
+))<CategoryItemProps>`
   margin-right: 20px;
   padding: 5px 0;
   font-size: 18px;
