@@ -1,5 +1,16 @@
 import React, { FunctionComponent } from "react"
 import styled from "@emotion/styled"
+import PostItem from "components/Main/PostItem"
+
+const POST_ITEM_DATA = {
+  title: "Post Item Title",
+  date: "2022.10.12",
+  categories: ["Web,Frontend,Testing"],
+  summary: "Lorem ipsum blabla",
+  thumbnail:
+    "https://ji5485.github.io/static/e4f34c558ae8e8235ff53b0311085796/4d854/javascript-core-concept-summary-function-1.webp",
+  link: "https://www.google.co.kr/",
+}
 
 const PostListWrapper = styled.div`
   display: grid;
@@ -11,7 +22,14 @@ const PostListWrapper = styled.div`
 `
 
 const PostList: FunctionComponent = function () {
-  return <PostListWrapper></PostListWrapper>
+  return (
+    <PostListWrapper>
+      <PostItem {...POST_ITEM_DATA} />
+      <PostItem {...POST_ITEM_DATA} />
+      <PostItem {...POST_ITEM_DATA} />
+      <PostItem {...POST_ITEM_DATA} />
+    </PostListWrapper>
+  )
 }
 
 export default PostList
