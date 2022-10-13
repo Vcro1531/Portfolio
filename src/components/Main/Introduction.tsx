@@ -50,7 +50,7 @@ const Introduction: FunctionComponent = function () {
         <ProfileImage />
 
         <div>
-          <SubTitle>Learn rather then Study.</SubTitle>
+          <SubTitle>Learn rather then Study & Keep It Simple, Stupid.</SubTitle>
           <SubTitle>(not yet)FrontEnd Dev</SubTitle>
           <>
             <Title>김지민</Title>
