@@ -6,9 +6,9 @@ const POST_ITEM_DATA = {
   title: "Post Item Title",
   date: "2022.10.12",
   categories: ["Web,Frontend,Testing"],
-  summary: "Lorem ipsum blabla",
-  thumbnail:
-    "https://ji5485.github.io/static/e4f34c558ae8e8235ff53b0311085796/4d854/javascript-core-concept-summary-function-1.webp",
+  summary:
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae cumque cupiditate dolorum nesciunt aspernatur nam architecto non quidem impedit ipsa, iste, sunt explicabo distinctio odit ipsam fugiat recusan",
+  thumbnail: "https://i.insider.com/60144316a7c0c4001991dde6?format=jpeg",
   link: "https://www.google.co.kr/",
 }
 
@@ -20,7 +20,6 @@ const PostListWrapper = styled.div`
   margin: 0 auto;
   padding: 50px 0 100px;
 `
-
 const PostList: FunctionComponent = function () {
   return (
     <PostListWrapper>
