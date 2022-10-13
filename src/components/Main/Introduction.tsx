@@ -36,12 +36,10 @@ const Introduction: FunctionComponent = function () {
         <ProfileImage />
 
         <div>
-          <SubTitle>
-            Hello, World! 공부보단 배움, 실력보단 사람을 중요히 생각하는
-            FrontEnd
-          </SubTitle>
+          <SubTitle>Learn rather then Study.</SubTitle>
+          <SubTitle>(not yet)FrontEnd Dev</SubTitle>
           <>
-            <Title>RWA</Title>
+            <Title>김지민</Title>
           </>
         </div>
       </Wrapper>
