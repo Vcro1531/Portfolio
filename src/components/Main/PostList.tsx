@@ -17,8 +17,19 @@ export type PostType = {
   }
 }
 
-type PostListProps={
-  posts:PostType[]
+type PostListProps = {
+  posts: PostType[]
+}
+
+type PostItemProps = {
+  title: string
+  date: string
+  categories: string[]
+  summary: string
+  thumbnail: {
+    publicURL: string
+  }
+  link: string
 }
 
 const PostListWrapper = styled.div`
@@ -36,21 +47,39 @@ const PostListWrapper = styled.div`
   }
 `
 
-const PostList: FunctionComponent<PostListProps> = function ({posts}){
-  return(
+const PostList: FunctionComponent<PostListProps> = function ({ posts }) {
+  return (
     <PostListWrapper>
-      {posts.map(
-        ({
-          node:{id,prontmatter},
-        }:PostType)=>(
-          <PostItem
-            {...frontmatter}
-            link="https://www.google.co.kr/">
-            key={id}
-            />
-        ),
-      )}
+      {posts.map(({ node: { id, frontmatter } }: PostType) => (
+        <PostItem {...frontmatter} link="https://www.google.co.kr/" key={id} />
+      ))}
     </PostListWrapper>
+  )
+}
+
+const PostItem: FunctionComponent<PostItemProps> = function ({
+  title,
+  date,
+  categories,
+  summary,
+  thumbnail: { publicURL },
+  link,
+}) {
+  return (
+    <PostItemWrapper to={link}>
+      <ThumnailImage src={publicURL} alt="Post Item Image" />
+
+      <PostItemContent>
+        <Title>{title}</Title>
+        <Date>{date}</Date>
+        <Category>
+          {categories.map(category => (
+            <CategoryItem key={category}>{category}</CategoryItem>
+          ))}
+        </Category>
+        <Summary>{summary}</Summary>
+      </PostItemContent>
+    </PostItemWrapper>
   )
 }
 
