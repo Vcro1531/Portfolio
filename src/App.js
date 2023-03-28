@@ -1,7 +1,14 @@
-import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Root from "./components";
 
-function App() {
-  return <div>hi</div>;
-}
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+      <Route path="/" element={<Root />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
 export default App;
