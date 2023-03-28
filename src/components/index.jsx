@@ -1,5 +1,18 @@
-const Root = () => {
-  return <div>hi</div>;
+import React from "react";
+import styled from "styled-components";
+
+const Main = () => {
+  return (
+    <>
+      <Mainpage>
+
+      </Mainpage>
+    </>
+  );
 };
 
-export default Root;
+export default Main;
+
+const Mainpage = styled.div`
+  
+`;
